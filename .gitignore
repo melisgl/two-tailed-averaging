@@ -1,0 +1,12 @@
+*~
+figures/
+/paper.aux
+/paper.auxlock
+/paper.figlist
+/paper.log
+/paper.pdf
+/paper.out
+/paper.bbl
+/paper.blg
+/paper.fdb_latexmk
+/paper.fls
