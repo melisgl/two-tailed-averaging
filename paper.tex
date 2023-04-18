@@ -181,7 +181,7 @@ Line segments indicate running averages whose length (the number of optimization
 The two averages start out the same, but after the first evaluation, there is always one short (S) and one long (L) average, where the long one has more iterates averaged and a better loss.
 When the loss with the short one is not worse than with the long average, the long one is reset, and the short average becomes the long one.
 These switch points are marked by dotted lines.
-In any interval labeled with L, there is at least one point where the length of the long average is near optimal.}
+In any interval labelled with L, there is at least one point where the length of the long average is near optimal.}
 \label{fig:schematic}
 \end{figure*}
 
@@ -335,7 +335,7 @@ For time step $t$, the estimate of the optimal averaging length is $L$, and $\th
 \begin{algorithm}[t]
   \caption[Extensions to Two-Tailed Averaging.]{\small Extensions to Two-Tailed Averaging.
 This is the version recommended for use in practice.
-The parts unchanged from \Cref{alg:two-tailed-averaging-core} are grayed out.
+The parts unchanged from \Cref{alg:two-tailed-averaging-core} are greyed out.
 There are two extensions.
 First, the short and long averages are reset if they are stagnating (i.e.\  they have not improved for a few evaluations).
 This reset heuristic makes the algorithm quicker to adapt when \Cref{monotone-opt} is violated (see \Cref{sec:tta-failed-assumptions}).
