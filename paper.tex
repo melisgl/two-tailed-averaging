@@ -263,11 +263,11 @@ We assume the generalization loss is evaluated periodically, every $E \in \natnu
 Here and in the following, $t$ and $n$ (with or without subscripts) are assumed to be from $\natnumzero$ and $[0, E, 2E, 3E, \dots]$, respectively, and \emph{loss} always refers to $f$.
 Denoting the average of most recent $\Delta$ iterates up to time step $t$ with $\avg(t, \Delta) = \frac{1}{\Delta} \sum_{i=t+1-\Delta}^{t} \theta_i$, we define the optimal averaging length as
 \begin{align*}
-\OL(t) = \argmin_{\Delta \in [1, \dots, t]} f(\avg(t, \Delta)).
+\OL(t) = \argmin_{\Delta \in [1..t]} f(\avg(t, \Delta)).
 \end{align*}
 Our task is to approximate $\OL(n)$ and $\avg(n, \OL(n))$ at all evaluation steps $n$ during optimization.
 
-The trivial algorithm to find $\OL(n)$, which saves all $\theta_i$ and performs a search over $\Delta \in [1, \dots, n]$ to minimize $f(\avg(n, \Delta))$, has prohibitive storage and evaluation cost, proportional to $n$.
+The trivial algorithm to find $\OL(n)$, which saves all $\theta_i$ and performs a search over $\Delta \in [1..n]$ to minimize $f(\avg(n, \Delta))$, has prohibitive storage and evaluation cost, proportional to $n$.
 Even assuming that $f$ improves monotonically in $\Delta$ up to its optimum, the cost is still proportional to $\OL(n)$.
 Our proposed algorithm approximates $\OL(n)$ and $\avg(n, \OL(n))$ with a constant cost.
 
